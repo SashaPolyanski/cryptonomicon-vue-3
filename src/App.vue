@@ -176,7 +176,7 @@ export default {
         const data = await f.json();
         this.tickers.find((f) => f.name === newTicker.name).price =
           data.USD > 1 ? data.USD.toFixed(3) : data.USD.toPrecision(2);
-      }, 300);
+      }, 500);
       this.ticker = "";
     },
     handleDelete(tickerToRemove) {
